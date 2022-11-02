@@ -44,14 +44,17 @@ public class Book {
     }
 
     public int hashCode() {
+        int result = nameBook == null ? 0 : nameBook.hashCode();
+        result = result + nameAuthor;
+        result = result + publicYear;
 
-        return java.util.Objects.hashCode(0);
+        return result;
     }
 
     public boolean equals(Object other) {
 
         if( this == other) return true;
-        if (o == null || getClass() != other.getClass())  return false;
+        if (other == null || getClass() != other.getClass())  return false;
         Book menedgment = (Book) other;
         return nameBook == menedgment.nameBook;
         return nameAuthor == menedgment.nameAuthor;

@@ -29,17 +29,18 @@ public class Author {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        int result = name == null ? 0 : name.hashCode();
+        result = result + sername;
+        return result;
     }
 
     @Override
     public boolean equals(Object other) {
-        Author book = new Author("Sergei","Ivanov");
-        Author book1 = book;
-        if (this.getClass() == other.getClass()) {
+        if (this == other) return true;
+        if (other == null || getClass() !== other.getClass()) return false;
+        Author book = (Author) other;
 
-        }
-
-        return true;
+        return name == book.name;
+        return sername == book.sername;
     }
 }

@@ -40,7 +40,9 @@ public class Book {
 
     // Домашнее задание по теме Методы объектов
     public String toString() {
-        return "название " + this.nameBook + "автор " + this.nameAuthor + "год " + this.publicYear;
+        return "nameBook = '" + nameBook + '\''+
+               ", nameAuthor = '" + nameAuthor + '\'' +
+               ", publicYear" + publicYear;
     }
 
     public int hashCode() {

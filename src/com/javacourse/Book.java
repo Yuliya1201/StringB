@@ -17,9 +17,7 @@ public class Book {
         System.out.println("Book.this.publicYear = " + Book.this.getPublicYear());
         Book.this.setPublicYear("1987");
         System.out.println("Book.this.getPublicYear() = " + Book.this.getPublicYear());
-    }
-
-    public Book() {
+    
 
     }
 
@@ -52,13 +50,12 @@ public class Book {
 
     public boolean equals(Object other) {
 
-
-        Book menedgment = new Book("Menedgment", "Sergei Ivanov", "1980");
-        Book menedgment1 = new Book("Menedgment ", "Sergei Ivanov ", "1980");
-        if (this.getClass() != other.getClass()) {
-
-        }
-        return false;
+        if( this == other) return true;
+        if (o == null || getClass() != other.getClass())  return false;
+        Book menedgment = (Book) other;
+        return nameBook == menedgment.nameBook;
+        return nameAuthor == menedgment.nameAuthor;
+        return publicYear == menedgment.publicYear;
     }
 }
 

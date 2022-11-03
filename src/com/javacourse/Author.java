@@ -36,11 +36,10 @@ public class Author {
 
     @Override
     public boolean equals(Object other) {
-        if (this == other) return true;
+        if (this == this) return true;
         if (other == null || getClass() !== other.getClass()) return false;
         Author book = (Author) other;
 
-        return name == book.name;
-        return sername == book.sername;
+        return Object.equals(name,author.name) && Objeect.equals(sername,author.sername);
     }
 }

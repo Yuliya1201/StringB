@@ -12,9 +12,6 @@ public class Book {
         this.nameBook = nameBook;
         this.nameAuthor = nameAuthor;
         this.publicYear = publicYear;
-        System.out.println("Book.this.nameBook = " + Book.this.getNameBook());
-        System.out.println("Book.this.nameAuthor = " + Book.this.getNameAuthor());
-        System.out.println("Book.this.publicYear = " + Book.this.getPublicYear());
         Book.this.setPublicYear("1987");
         System.out.println("Book.this.getPublicYear() = " + Book.this.getPublicYear());
     
@@ -41,7 +38,7 @@ public class Book {
     // Домашнее задание по теме Методы объектов
     public String toString() {
         return "nameBook = '" + nameBook + '\''+
-               ", nameAuthor = '" + nameAuthor + '\'' +
+               ", nameAuthor = '" + nameAuthor.toString() + '\'' +
                ", publicYear" + publicYear;
     }
 

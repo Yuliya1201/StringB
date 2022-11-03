@@ -8,11 +8,6 @@ public class Author {
     public Author(String name, String sername) {
         this.name = name;
         this.sername = sername;
-        System.out.println("Author.this.name = " + Author.this.getName());
-        System.out.println("Author.this.sername = " + Author.this.getSername());
-    }
-
-    public Author() {
 
     }
     public String getName() {

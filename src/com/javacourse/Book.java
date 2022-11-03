@@ -55,12 +55,10 @@ public class Book {
 
     public boolean equals(Object other) {
 
-        if( this == other) return true;
+        if( this == this) return true;
         if (other == null || getClass() != other.getClass())  return false;
         Book menedgment = (Book) other;
-        return nameBook == menedgment.nameBook;
-        return nameAuthor == menedgment.nameAuthor;
-        return publicYear == menedgment.publicYear;
+        return Object.equals (nameBook,menedgment.nameBook) && Object.equals (nameAuthor,menedgment.nameAuthor) && Object.equals (publicYear, manadgment.publicYear);
     }
 }
 

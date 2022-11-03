@@ -40,6 +40,6 @@ public class Author {
         if (other == null || getClass() !== other.getClass()) return false;
         Author book = (Author) other;
 
-        return Object.equals(name,author.name) && Objeect.equals(sername,author.sername);
+        return Object.equals(name,book.name) && Objeect.equals(sername,book.sername);
     }
 }
